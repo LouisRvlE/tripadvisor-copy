@@ -1,0 +1,823 @@
+/* this is a comment */
+
+/* ******************************** */
+/* html: elements */
+/* ******************************** */
+
+@font-face {
+    font-family: "TripSansMed";
+    src: url("../fonts/TripSans-Medium.woff2") format('woff2');
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "TripSansMedReg";
+    src: url("../fonts/TripSansMono-Regular.woff2") format('woff2');
+    font-weight: bolder;
+}
+
+
+@font-face {
+    font-family: "TripSansMed";
+    src: url("../fonts/TripSans-VF.woff2") format('woff2');
+}
+
+* {
+    text-decoration: none;
+}
+
+body {
+    font-family: TripSansMed, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    width: 100%;
+}
+
+aside {
+    background-color: #faf1ed;
+    padding: 20px 0px;
+}
+
+section {
+    width: 82%;
+    margin: 10px auto;
+}
+
+h1 {
+    font-size: 54px;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 28px;
+}
+
+h4 {
+    font-size: 24px;
+    font-family: "TripSansMedReg";
+}
+
+h5 {
+    font-size: 18px;
+    font-family: "TripSansMedReg";
+}
+
+h5:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+img {
+    width: 100%;
+}
+
+/* ******************************** */
+/* logo */
+/* ******************************** */
+
+#tripadvisor {
+    width: 190px;
+}
+
+#tripadvisor-logo {
+    width: 40px;
+}
+
+#tripadvisor:hover {
+    cursor: pointer;
+}
+
+#tripadvisor-logo:hover {
+    cursor: pointer;
+}
+
+
+/* ******************************** */
+/* global space */
+/* ******************************** */
+
+.section-spacing {
+    margin-top: 68px;
+}
+
+/* ******************************** */
+/* header */
+/* ******************************** */
+
+
+
+header #searchbar {
+    border-width: 0.5px;
+    border-style: solid;
+    border-radius: 30px;
+    border-color: #8184884f;
+    height: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+#searchbar input {
+    border: none;
+    flex-grow: 1;
+    height: inherit;
+    margin: 0 10px 0 10px;
+    padding: 0;
+    font-size: larger;
+}
+
+#searchbar input:focus {
+    outline: none;
+}
+
+.search-mobile1 {
+    display: none;
+}
+
+.search-mobile2 {
+    display: none;
+}
+
+
+@media only screen and (max-width: 1080px) {
+    #searchbar {
+        display: none !important;
+    }
+    
+    .search-mobile1 {
+        display: block;
+        margin: 0px 15px;
+    }
+    .search-mobile1:hover {
+        cursor: pointer;
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    .navbar nav {
+        display: none;
+    }
+
+    .search-mobile2 {
+        display: block;
+    }
+    .search-mobile2:hover {
+        cursor: pointer;
+    }
+}
+
+/* header => path to section */
+header>section {
+    display: flex;
+    justify-content: space-between;
+    /* horizontal */
+    margin-top: 15px;
+}
+
+/* header => path to section => path to nav */
+header>section>nav {
+    display: flex;
+    align-items: center;
+}
+
+header nav div {
+    display: flex;
+    align-items: center;
+    /* vertical */
+}
+
+header a {
+    color: #000;
+    font-weight: bold;
+    font-size: 15px;
+    margin-left: 5px;
+}
+
+header a:hover {
+    color: #000;
+}
+
+#sign-in {
+    border: none;
+    background-color: #000;
+    color: #fff;
+    border-radius: 30px;
+    font-size: 15px;
+    padding: 12px 16px;
+    margin-left: 16px;
+}
+
+header>section>nav>div,
+button {
+    margin-left: 15px;
+}
+
+/* ******************************** */
+/* main: h1 explore */
+/* ******************************** */
+
+#explore {
+    color: rgb(158, 23, 158);
+}
+
+/* ******************************** */
+/* main: main-navigation */
+/* ******************************** */
+
+.main-navigation {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.main-navigation>div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 23%;
+    /* minimal width */
+    border: 1px solid #000;
+    /* border-width; 1px; border-style: solid; border-color: #000; */
+    border-radius: 10px;
+    box-sizing: border-box;
+    /* same size */
+    padding: 11px 16px;
+    margin-right: 8px;
+    margin-bottom: 10px;
+
+    transition: all 0.25s;
+}
+
+.main-navigation p {
+    margin-bottom: 0px;
+}
+
+.main-navigation>div:hover {
+    background-color: #000;
+    color: white;
+    cursor: pointer;
+}
+
+.main-navigation>div:hover svg {
+    fill: white;
+}
+
+/* ******************************** */
+/* main: images */
+/* ******************************** */
+
+/* selector :hover, :focus, :first-child, :last-child, :nth-child  */
+
+.images {
+    display: flex;
+    margin-top: 12px;
+    height: 430px;
+}
+
+.images img {
+    transition: all 0.25s;
+}
+
+.images>div:first-child {
+    width: 60%;
+    height: 100%;
+    margin-right: 2px;
+}
+
+.images>div:first-child img {
+    height: 100%;
+    object-fit: cover;
+    /* crop the image to fill the box (no stretching nor change of the size) */
+    cursor: pointer;
+}
+
+.images>div:last-child {
+    width: 40%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.images>div:last-child img {
+    height: 49.9%;
+    object-fit: cover;
+    /* crop the image to fill the box (no stretching nor change of the size) */
+    cursor: pointer;
+}
+
+.images img:hover {
+    opacity: 50%;
+}
+
+#all-images-button {
+    position: relative;
+    bottom: 40px;
+    left: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+    color: #fff;
+    border-radius: 20px;
+    font-size: 12px;
+    width: 120px;
+    height: 30px;
+
+    transition: all 0.25s;
+}
+
+#all-images-button p {
+    margin: 0;
+    margin-left: 3px;
+}
+
+#all-images-button:hover {
+    background-color: #3f3f3f;
+    cursor: pointer;
+}
+
+/* ******************************** */
+/* main: sub-navigation */
+/* ******************************** */
+
+.flex {
+    display: flex;
+    align-items: baseline;
+}
+
+.sub-navigation {
+    display: flex;
+    justify-content: space-between;
+    font-family: "TripSansMedReg";
+    color: #333;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.sub-navigation a {
+    color: #333;
+}
+
+.sub-navigation a:hover {
+    text-decoration: underline;
+    color: #333;
+}
+
+.sub-navigation .icon {
+    margin-left: 4px;
+}
+
+/* ******************************** */
+/* main: description */
+/* ******************************** */
+
+.description {
+    width: 60%;
+}
+
+.description p {
+    color: #333;
+    font-family: "Georgia";
+    font-size: 20px;
+    line-height: 24px;
+}
+
+@media only screen and (max-width: 820px) {
+    .description {
+        width: 100%;
+    }
+}
+
+/* ******************************** */
+/* main: travel advice */
+/* ******************************** */
+
+
+.travel-advice-container img {
+    width: 88px;
+    height: 80px;
+}
+
+.travel-advice {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 15px;
+}
+
+.travel-advice>div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1;
+    flex-grow: 1;
+    border: 2px solid rgb(211, 211, 211);
+    border-radius: 15px;
+    padding: 0px 20px;
+    cursor: pointer;
+}
+
+.travel-advice>div:last-child {
+    margin-right: 0px;
+}
+
+.travel-advice>div:hover {
+    background-color: rgba(211, 211, 211, 0.3);
+}
+
+.travel-advice>div>p {
+    font-size: 16px;
+    margin-bottom: 0;
+    width: max-content;
+}
+
+/* ******************************** */
+/* main: essential */
+/* ******************************** */
+
+.essential-container {
+    display: flex;
+    margin-bottom: 70px;
+}
+
+.essential-container>div:first-child {
+    width: 25%;
+    padding-right: 10px;
+}
+
+.essential-container>div:last-child {
+    width: 75%;
+}
+
+.essential-container p {
+    color: #333;
+    font-family: "Georgia";
+    font-size: 18px;
+    line-height: 24px;
+}
+
+.essential-container a {
+    color: #333;
+    font-size: 16px;
+    text-decoration: underline;
+}
+
+.essential-container a:hover {
+    color: #000;
+}
+
+.essential-container .essential {
+    display: flex;
+}
+
+.essential-reviews,
+.essential-reviews-number,
+.essential h5 {
+    margin: 2px 0px;
+}
+
+/* .essential-container .essential > div {margin-right:15px} */
+/* .essential-container .essential > div:last-child {margin-right:0px}*/
+.essential-container .essential>div:not(:last-child) {
+    margin-right: 15px;
+}
+
+.essential img {
+    width: 270px;
+    height: 205px;
+    margin-bottom: 8px;
+    object-fit: cover;
+    /* crop the image to fill the box (no stretching nor change of the size) */
+    cursor: pointer;
+}
+
+.essential-icon {
+    color: #00aa6c;
+    margin-right: 6px;
+}
+
+.essential-reviews {
+    font-size: 15px;
+    font-family: "TripSansMedReg";
+}
+
+.essential-reviews-number {
+    font-size: 13px;
+    font-family: "TripSansMedReg";
+}
+
+.carousel {
+    width: 100%;
+}
+
+.carousel-item>div {
+    width: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.carousel-item>div {
+    gap: 15px
+}
+
+.carousel-item>div>div {
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.carousel-item>div>div>div {
+    width: 270px;
+}
+
+.carousel-item>div>div>div:hover img,
+.visit:hover,
+.dig-into-image:hover {
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    top: -70px !important;
+    width: 2em !important;
+}
+
+.carousel-control-prev-icon {
+    background-image: url("../../assets/img/arrow-left.png") !important;
+    height: auto;
+}
+
+.carousel-control-next-icon {
+    background-image: url("../../assets/img/arrow-right.png") !important;
+}
+
+.carousel-control-prev-icon:hover {
+    background-image: url("../../assets/img/arrow-left-hover.png") !important;
+}
+
+.carousel-control-next-icon:hover {
+    background-image: url("../../assets/img/arrow-right-hover.png") !important;
+}
+
+@media only screen and (max-width: 1370px) {
+    .essential-container {
+        flex-direction: column;
+    }
+
+    .essential-container>div {
+        width: 100% !important;
+        margin-bottom: 20px;
+    }
+
+    .carousel-item>div>div>div,
+    .carousel-item>div>div>div img {
+        width: 100% !important;
+    }
+}
+
+@media only screen and (max-width: 680px) {
+
+    .carousel-item>div {
+        flex-direction: column !important;
+    }
+}
+
+/* ------ Hearth Container ------ */
+
+.heart-container {
+    z-index: 1;
+    height: 0;
+    position: relative;
+    width: 100%;
+}
+
+.heart-container div {
+    position: relative;
+    top: 5px;
+    left: calc(100% - 40px - 5px);
+
+    background-color: white;
+    width: 40px;
+    height: 40px;
+    padding: 8px;
+    border-radius: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.heart-container div:hover {
+    background-color: #F2F2F2;
+    cursor: pointer;
+}
+
+.heart-container svg {
+    width: 24px;
+    height: 24px;
+}
+
+/* ******************************** */
+/* main: dig into */
+/* ******************************** */
+
+.subtitle {
+    font-family: "TripSansMedReg";
+}
+
+.dig-into-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.dig-into-container>div:not(:last-child) {
+    margin-right: 15px;
+}
+
+.dig-into-container a {
+    color: #000;
+}
+
+.dig-into-container a:hover {
+    text-decoration: underline;
+}
+
+.dig-into-container a:hover {
+    text-decoration: underline;
+}
+
+.dig-into-cell {
+    flex: 1;
+    height: auto;
+    background-color: #fff;
+    text-align: center;
+}
+
+.dig-into-image {
+    height: 232px;
+    background-position: center;
+    background-size: cover;
+}
+
+#dig-into-image-01 {
+    background-image: url('https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1b/bb/e7/b4/caption.jpg?w=400&h=400&s=1')
+}
+
+#dig-into-image-02 {
+    background-image: url('https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1c/6c/eb/81/caption.jpg?w=400&h=400&s=1')
+}
+
+#dig-into-image-03 {
+    background-image: url('https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/cd/90/41/caption.jpg?w=400&h=400&s=1')
+}
+
+.dig-into-link {
+    padding: 15px;
+}
+
+.dig-into-link-main {
+    font-size: 18px;
+}
+
+.dig-into-link-main:hover,
+.underline:hover {
+    color: black;
+    text-decoration: none !important;
+}
+
+@media only screen and (max-width: 680px) {
+    .dig-into-container {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .dig-into-container>div {
+        width: 100%;
+    }
+}
+
+/* ******************************** */
+/* main: dig into */
+/* ******************************** */
+
+.great-for {
+    display: flex;
+    width: 100%;
+    height: 450px;
+    gap: 15px;
+}
+
+.great-for>div {
+    flex: 1;
+    height: auto;
+}
+
+.great-for img {
+    width: 100%;
+    height: 50%;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 680px) {
+    .great-for {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .great-for img {
+        height: 300px;
+    }
+}
+
+/* ******************************** */
+/* footer */
+/* ******************************** */
+
+
+footer {
+    width: 100%;
+    background-color: #faf1ed;
+    position: absolute;
+}
+
+footer>section {
+    width: 80%;
+}
+
+footer p {
+    color: #333;
+    font-size: 12px;
+    font-family: "TripSansMedReg";
+    margin: 0px;
+    padding-bottom: 6px;
+}
+
+footer a {
+    color: #333;
+    font-size: 15px;
+    font-weight: bold;
+    text-decoration: underline;
+    margin-right: 15px;
+}
+
+footer a:hover {
+    color: #000;
+}
+
+.copyright-and-link {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 18px;
+}
+
+#notice {
+    padding: 8px 0px;
+}
+
+#more {
+    color: #333;
+    font-size: 12px;
+    font-family: "TripSansMedReg";
+    text-decoration: none;
+}
+
+#more:hover {
+    text-decoration: underline;
+}
+
+footer select {
+    border: 2px solid rgb(211, 211, 211);
+    border-radius: 15px;
+    width: 180px;
+    height: 35px;
+    font-size: 15px;
+    padding: 0px 10px;
+}
+
+#currency-and-country {
+    margin-top: -40px;
+}
+
+@media only screen and (max-width: 1000px) {
+    footer>section {
+        flex-direction: column;
+        align-items: center !important;
+        justify-content: center;
+    }
+
+    #currency-and-country {
+        margin-top: 0;
+    }
+    #currency-and-country>select:hover {
+        cursor: pointer;
+    }
+
+}
